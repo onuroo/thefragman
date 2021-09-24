@@ -69,7 +69,7 @@ const MyTabBar = ({state, navigation}) => {
 
   const insets = useSafeArea();
 
-  let height = size(60);
+  let height = size(70);
 
   height += insets.bottom;
 
@@ -78,7 +78,7 @@ const MyTabBar = ({state, navigation}) => {
   return useMemo(() => {
     const button = showTabBar && appIsLoaded && (
       <View
-        style={[tabBarContainerStyle, {height, margin: 5,paddingBottom: insets.bottom}]}>
+        style={[tabBarContainerStyle, {height, margin: 5,paddingBottom: insets.bottom,justifyContent: 'center',alignItems: 'center'}]}>
         {/* <View style={{position: 'absolute',borderWidth: 1,borderColor: 'rgba(255, 255 ,255, 1)',zIndex: -1, left: 0, right: 0, bottom: 0, top: 0,
       shadowColor: "black",
       shadowOffset: {
@@ -159,7 +159,6 @@ const TabScreens = () => {
       lazy={false}
       tabBarOptions={{
         style: {
-          backgroundColor: 'green',
           borderTopWidth: 0,
           position: 'absolute',
           left: 50,
@@ -188,9 +187,8 @@ const styles = () => {
       bottom: 0,
       right: 0,
       width: '100%',
-      height: size(70),
+      height: size(100),
       flexDirection: 'row',
-      backgroundColor: 'transparent',
       shadowColor: '#000000',
       shadowOffset: {
         width: 0,
@@ -198,7 +196,8 @@ const styles = () => {
       },
       shadowOpacity: 0.05,
       shadowRadius: 4.84,
-      elevation: 16,
+      backgroundColor: 'transparent',
+      elevation: 24,
     },
   });
 };

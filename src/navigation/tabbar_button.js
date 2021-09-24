@@ -33,7 +33,7 @@ const DefaultButton = props => {
         activeOpacity={1}
         onPress={onPress}
         onLongPress={onLongPress}
-        style={{...tabBarButtonContainerStyle,marginRight: 1, backgroundColor: light_red_bg_color, borderRadius: 5,alignItems: 'center',width: '11%',alignItems: 'center'}}>
+        style={{...tabBarButtonContainerStyle,marginRight: 1, backgroundColor: activeTabIndex === INDEXES[name] ? dark_red_bg_color :  light_red_bg_color, borderRadius: 5,alignItems: 'center',width: '11%',alignItems: 'center'}}>
         <View>
           <Image source={icon} style={[imageStyle, {opacity: 1,margin: 0,}]} />
         </View>
@@ -96,7 +96,6 @@ const styles = () => {
       height: size(60),
       justifyContent: 'center',
       alignItems: 'center', 
-      backgroundColor: 'transparent',
       shadowColor: "black",
       shadowOffset: {
         width: 10,
@@ -104,6 +103,7 @@ const styles = () => {
       },
       shadowOpacity: 0.58,
       shadowRadius: 16.00,
+      elevation: 24,
     },
     tabBarCustomButtonContainerStyle: {
       paddingTop: size(15),

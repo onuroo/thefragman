@@ -12,7 +12,7 @@ const VizyondakiFilmlerScreen = () => {
     <SafeAreaView style={{flex: 1}}>
       <WebView
         source={{ uri: 'https://www.thefragman.com.tr/vizyondaki-filmler.html' }}
-        style={{ height: HEIGHT, width: WIDTH }}
+        style={{ height: '100%', width: '100%' }}
       />
     </SafeAreaView>
   );
